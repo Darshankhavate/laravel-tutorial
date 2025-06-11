@@ -1,17 +1,29 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/home', function (){
+//     return view('home');
+// });
 
-// Route::view('/home','home');
-Route::get('/about/{name}', function ($name){
-    echo  "$name";
-    return view('about',['name' =>$name]);
-});
+//Redirect from
+// Route::redirect('/home', '/about');
+
+// Route::get('/about', function (){
+//     return view('about');
+// });
+
+//Pass Data with Route
+// Route::get('/about/{name}', function ($name) {
+//     return view('about', ['name' => $name]);
+// });
+
+Route::get('/user', [UserController::class, 'getUser']);
+Route::get('/view', [UserController::class, 'getView']);
+Route::get('namedata/{name}', [UserController::class, 'getViewDta']);
+Route::get('/admin', [UserController::class, 'adminLogin']);
