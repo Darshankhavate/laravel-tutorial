@@ -8,5 +8,5 @@ Route::get('/', function () {
 });
 
 
-Route::view('/userform', 'userform');
-Route::post('/userform', [UserController::class, 'addUser']);
+Route::view('formuser', 'formuser');
+Route::post('/fromuser',[UserController::class, 'addUser']);

@@ -7,12 +7,22 @@ use Illuminate\Http\Request;
 
  class UserController extends Controller
 {
-   public function addUser(Request $request){
-    echo "user name is:- $request->name";
-    echo "<br>";
-    echo "user email is:- $request->email";
-    echo "<br>";
-    echo "user city:- $request->city";
+   public function addUser(Request $request)
+{
+    $request->validate([
+        'name' => 'required|min:3|max:10',
+        'email' => 'required|email',
+        'city' => 'required',
+        'language' => 'required',
+    ],[
+      'name.required'=>'User name can not be empty',
+      'name.min'=>"User name have to be at least 3 char",
+      'name.max'=>'user name have to maximum 15 char allow',
+      'email.required'=>'User E-mail most require',
+      'name.city'=>'User city is option'
+
+    ]);
+     return $request;
    }
 
 }
