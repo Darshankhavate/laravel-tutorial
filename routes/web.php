@@ -8,5 +8,9 @@ Route::get('/', function () {
 });
 
 
-Route::view('formuser', 'formuser');
-Route::post('/fromuser',[UserController::class, 'addUser']);
+// Route::view('formuser', 'formuser');
+// Route::post('/fromuser',[UserController::class, 'addUser']);
+
+Route::view('/urlgenrate', 'urlgenrate');
+Route::view('/about', 'about');
+Route::view('/user', 'about');
