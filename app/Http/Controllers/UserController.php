@@ -23,14 +23,17 @@ class UserController extends Controller
     //     return view('admin.login');
     // }
 
-    // function about(){
-    //     $name = "About Us";
-    //     return view('about', ['name' => $name]);
-    // }
+    function about(){
+        return view('about');
+    }
 
     function home(){
-        $name = "Darshan";
-        $user = ['darshan', 'sammed', 'nikhil', 'sagar'];
-        return view('admin.home', ['name' => $name, 'user'=>$user]);
+        return view('home');
     }
+
+//     function Userhome(){
+//         $name = "Darshan";
+//         $user = ['darshan', 'sammed', 'nikhil', 'sagar'];
+//         return view('admin.home', ['name' => $name, 'user'=>$user]);
+//     }
 }

@@ -28,9 +28,12 @@ Route::get('/', function () {
 // Route::get('namedata/{name}', [UserController::class, 'getViewDta']);
 // Route::get('/admin', [UserController::class, 'adminLogin']);
 
-// Route::view('/about','about');
+Route::get('/about', [UserController::class, 'about']);
 // //Call View to Controller
 // Route::get('/userabout/{name}', [UserController::class, 'about']);
 
 //nested views
-Route::get('/userhome', [UserController::class, 'home']);
+// Route::get('/userhome', [UserController::class, 'home']);
+
+
+Route::get('/home', [UserController::class, 'home']);
