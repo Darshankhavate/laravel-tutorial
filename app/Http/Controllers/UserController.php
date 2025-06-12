@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
     $request->validate([
         'name' => 'required|min:3|max:10',
         'email' => 'required|email',
-        'city' => 'required',
+        'city' => 'required |uppsercase',
         'language' => 'required',
     ],[
       'name.required'=>'User name can not be empty',

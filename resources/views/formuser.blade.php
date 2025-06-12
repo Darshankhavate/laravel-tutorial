@@ -11,7 +11,7 @@
     <form action="fromuser" method="post">
         @csrf
         <div class="input-form">
-            <input type="text" value="{{ old('name') }}" placeholder="Enter Name" name="name">
+            <input type="text" value="{{ old('name') }}" placeholder="Enter Name" name="name" class="{{ $errors->first('name')? 'input-error':'' }}">
             <span style="color:red;">@error('name'){{ $message }}@enderror</span>
         </div>
         <div class="input-form">
