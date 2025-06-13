@@ -7,10 +7,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::view('/home/user', 'home')->name('index');
+// Route::get('/show', [UserController::class, 'show']);
 
-// Route::view('formuser', 'formuser');
-// Route::post('/fromuser',[UserController::class, 'addUser']);
+Route::view('/student/home', 'home');
+Route::get('/student/show', [UserController::class,'show']);
+Route::get('/student/add',[UserController::class, 'add']);
 
-Route::view('/urlgenrate', 'urlgenrate');
-Route::view('/about', 'about');
-Route::view('/user', 'about');
+Route::prefix('student')->group(function(){
+    Route::view('/home', 'home');
+    Route::get('/show', [UserController::class,'show']);
+    Route::get('/add',[UserController::class, 'add']);
+
+});
+
+
+
+
