@@ -15,10 +15,8 @@ class AgeCheck
      */
     public function handle(Request $request, Closure $next): Response
     {
-        
-        print_r($request->age);
         if($request->age<18){
-            die("You'r Under 18 you can not acess this website");
+            die("You'r age is under 18");
         }
         return $next($request);
     }
