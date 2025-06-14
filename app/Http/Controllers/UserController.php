@@ -12,9 +12,18 @@ use Illuminate\Http\Request;
   // }
 
   function show(){
-    return "Student list";
+    return "list of controller";
   }
+
   function add(){
-    return "add new student";
+    return "list of add student";
+  }
+
+  function delete(){
+    return "list of student delete data";
+  }
+
+  function about($name){
+    return $name;
   }
 }
