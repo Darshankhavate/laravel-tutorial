@@ -5,6 +5,9 @@ use App\Http\Controllers\UserController;
 use PHPUnit\Framework\Attributes\Group;
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/users', [UserController::class,'users']);
