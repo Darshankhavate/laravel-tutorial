@@ -15,7 +15,8 @@
                 <td>{{$user->email}}</td>
                 <td>{{$user->phone}}</td>
             </tr>
-        @endforeach
+        
+            
     </table>
 
     <!-- People find pleasure in different ways. I find it in keeping my mind clear. - Marcus Aurelius -->
