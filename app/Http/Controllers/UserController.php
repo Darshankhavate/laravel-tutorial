@@ -9,14 +9,14 @@ use RangeException;
 
  class UserController extends Controller
 {
-  // function users(){
-  //   $users = DB::select('SELECT * FROM `users`');
-  //   return view('users', ['users'=>$users]);
-  // }
-
-//   public  function formuser(Request $request){
-//     echo"$request->name". "<br>";
-//     echo"$request->email". "<br>";
-//     echo"$request->phone". "<br>";
-//   }
- }
+  function studentUser(){
+    $students= \App\Models\Student::all();
+      return view('home', ['data'=>$students]);
+    
+  }
+  //   public  function formuser(Request $request){
+  //     echo"$request->name". "<br>";
+  //     echo"$request->email". "<br>";
+  //     echo"$request->phone". "<br>";
+  //   }
+}
