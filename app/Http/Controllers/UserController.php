@@ -10,6 +10,8 @@ use RangeException;
  class UserController extends Controller
 {
   function studentUser(){
+    $data =new \App\Models\Student;
+    echo $data->dumfun();
     $students= \App\Models\Student::all();
       return view('home', ['data'=>$students]);
     

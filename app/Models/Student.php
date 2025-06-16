@@ -7,4 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     //
+    protected $table = "college_students";
+
+
+    function dumfun(){
+        return "This is dummy function";
+    }
 }
