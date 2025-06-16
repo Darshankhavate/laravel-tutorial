@@ -10,8 +10,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/users', [UserController::class,'users']);
-// Route::view('/formuser','formuser');
-// Route::POST('/formuser', [UserController::class, 'formuser']);
-
-Route::get('/home', [UserController::class, 'studentUser']);
