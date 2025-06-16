@@ -10,3 +10,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/user', 'user');
+Route::get('/user', [UserController::class, 'httpclient']);
