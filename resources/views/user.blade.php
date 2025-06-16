@@ -1,24 +1,30 @@
-<div>
-    <h1>Query Builder</h1>
-
-
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email-Id</th>
-            <th>Phone</th>
-        </tr>
-        @foreach($users as $student)
-            <tr>
-                <td>{{ $student->id }}</td>
-                <td>{{ $student->name }}</td>
-                <td>{{ $student->email }}</td>
-                <td>{{ $student->phone }}</td>
-            </tr>
-        @endforeach
-    </table>
-
-    <!-- I have not failed. I've just found 10,000 ways that won't work. - Thomas Edison -->
-
+<!-- <div>
+    <h1>User Form</h1>
+    <form action='/user' method="get">
+        <div>
+            <input type="text" class="name" name="name" id="name" placeholder="Enter Your Name">
+        </div>
+        <br>
+         <div>
+            <input type="password" class="password" name="password" id="password" placeholder="Enter Your password">
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>-->
+<div> 
+    <h1>User Form</h1>
+    <form action='/user' method="post">
+        <input type="hidden" name="_method" vlaue="DELETE">
+        @csrf
+        <div>
+            <input type="text" class="name" name="name" id="name" placeholder="Enter Your Name">
+        </div>
+        <br>
+         <div>
+            <input type="password" class="password" name="password" id="password" placeholder="Enter Your password">
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
 </div>
