@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use PHPUnit\Framework\Attributes\Group;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -11,4 +12,4 @@ Route::get('/', function () {
 });
 
 Route::view('/user', 'user');
-Route::get('/user', [UserController::class, 'httpclient']);
+Route::get('/user', [UserController::class, 'queries']);
