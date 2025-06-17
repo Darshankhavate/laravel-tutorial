@@ -11,12 +11,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user', [UserController::class, 'GetMethod']);
-Route::view('/form', 'user');
-Route::post('/user', [UserController::class, 'PostMethod']);
-Route::put('/user', [UserController::class, 'PutMethod']);
-Route::patch('/patch', [UserController::class, 'PatchMethod']);
-Route::delete('/user', [UserController::class, 'DeleteMethod']);
+Route::post('/form', [UserController::class, 'login']);
+Route::view('/user','user');
 
 
 

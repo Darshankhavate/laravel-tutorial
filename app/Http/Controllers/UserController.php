@@ -1,30 +1,38 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 class UserController extends Controller
 {
     //
+    function login(Request $request){
+        echo "Request Method is". $request->method();
+        echo "<br>";
+        echo "Request Method is". $request->path();
+        echo "<br>";
+        echo "Request url is". $request->url();
+        echo "<br>";
+        echo "Request name is". $request->input('name');
+        echo "<br>";
+        echo "Request name is". $request->name;
+        echo "<br>";
+        print_r($request->input());
+        echo "<br>";
+        print_r($request->collect());
+        echo "<br>";
 
-    function GetMethod(){
-        return "Get Route Method";
+        if($request->isMethod('post')){
+            echo "execute code for post request";
+        }else{
+            echo "excute code of other";
+        }
+        echo"<br>";
+        if($request->is('user')){
+            echo "execute code for post request";
+        }else{
+            echo "excute code of other";
+        }
+        echo "name is" . $request->ip();
+        echo"<br>";
     }
-
-    function PostMethod(){
-        return "Post Route Method";
-    }
-
-    function PutMethod(){
-        return "Put Route Method";
-    }
-
-    function PatchMethod(){
-        return "Patch Route Method";
-    }
-
-    function DeleteMethod(){
-        return "Delete Route Method";
-    }
+   
 }

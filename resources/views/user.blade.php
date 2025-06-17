@@ -1,30 +1,13 @@
-<!-- <div>
-    <h1>User Form</h1>
-    <form action='/user' method="get">
-        <div>
-            <input type="text" class="name" name="name" id="name" placeholder="Enter Your Name">
-        </div>
-        <br>
-         <div>
-            <input type="password" class="password" name="password" id="password" placeholder="Enter Your password">
-        </div>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
-</div>-->
-<div> 
-    <h1>User Form</h1>
-    <form action='/user' method="post">
-        <input type="hidden" name="_method" vlaue="DELETE">
+ <div>
+    <h1>User Login</h1>
+    <form action="/form" method="post">
         @csrf
-        <div>
-            <input type="text" class="name" name="name" id="name" placeholder="Enter Your Name">
-        </div>
+        <input type="text" name="name" placeholder="Enter Name">
         <br>
-         <div>
-            <input type="password" class="password" name="password" id="password" placeholder="Enter Your password">
-        </div>
         <br>
-        <button type="submit">Submit</button>
+        <input type="password" name="password" placeholder="Enter Your Password">
+        <br>
+        <br>
+        <button type="submit">login</button>
     </form>
 </div>
